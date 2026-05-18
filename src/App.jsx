@@ -12,7 +12,7 @@ function App() {
     formData.append("file", file);
 
     const res = await axios.post(
-      "http://test111-be-2104362049.ap-northeast-2.elb.amazonaws.com/predict/",
+      `${import.meta.env.VITE_API_URL}/predict/`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
